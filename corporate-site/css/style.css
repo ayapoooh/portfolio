@@ -1,0 +1,1221 @@
+@charset "UTF-8";
+
+html {
+overflow: auto;
+}
+body {
+overflow: hidden;
+}
+
+body {
+	font-size: 100%;
+	width: 100%;
+}
+
+img {
+	width: 100%;
+}
+
+.flex {
+	display: flex;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.space {
+	margin-bottom: 5rem;
+}
+
+/*HEADER
+----------------------------------------------------*/
+#home {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+}
+
+#home_bg {
+	background-image: url(../img/main_bg3.jpg);
+	min-height: 86vh;
+	background-size: cover;
+	background-position: top;
+}
+
+h1 img {
+	max-width: 1.5rem;
+}
+
+.name {
+	font-size: 2.25rem;
+	font-family: 'Zen Antique Soft', serif;
+	margin-left: 5vw;
+}
+
+#home a {
+	color: #000;
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+}
+
+.header{
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.main_nav {
+	font-size: 1.25rem;
+	background-color: #6088C6;
+}
+
+.main_nav li{
+	padding: 5vh 4vw;
+	position: relative;
+	z-index: 1;
+	border-right: 1px solid #fff;
+}
+
+.main_nav a li:last-child{
+	border-right: none;
+}
+
+.main_nav a{
+	display: block;
+	color: #000;
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	border-right: 1px solid #fff;
+}
+
+.main_nav li::after {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 100%;
+	background-color: #AEC4E5;
+	transition:all .5s ;
+	opacity: 0;
+}
+
+.main_nav li:hover::after {
+	width: 100%;
+	opacity: 1;
+	z-index: -1;
+}
+
+#home .big_bg p {
+	font-size: 5rem;
+	font-family: 'Zen Antique Soft', serif;
+	padding-top: 6rem;
+	padding-left: 8rem;
+}
+
+#home .big_bg{
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+/*会社の説明
+----------------------------------------------------------*/
+#ex {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+#ex h2 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 2rem;
+	font-size: 2rem;
+}
+
+#ex p {
+	width: 70vw;
+	margin: auto;
+	line-height: 1.8rem;
+}
+
+/*新着仕事情報
+----------------------------------------------------------*/
+#info {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+#info h2 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#info .items {
+	width: 960px;
+	height: 180px;
+	padding: 0 1rem;
+	line-height: 2.2rem;
+	border: 1px solid #fff;
+	margin: auto;
+}
+
+#info li {
+	width: 930px;
+	border-bottom: 1px dashed #fff;
+	padding-left: 0.25rem ;
+}
+
+#info a{
+	color: #000;
+}
+
+#info .flex:hover {
+	cursor: pointer;
+	color: 	#EB8686 ;
+}
+
+#info li:last-child {
+	border-bottom: none;
+}
+
+#info .item:first-child {
+	min-width: 8vw;
+}
+
+#info .item:nth-child(2){
+	min-width: 10vw;
+}
+
+#info .item:nth-child(3){
+	min-width: 18vw;
+}
+
+#info .bg {
+	background-color: #AEC4E5;
+	width: 1000px;
+	height: 220px;
+	padding: 20px;
+	margin: auto;
+}
+
+/*仕事を探されている方
+----------------------------------------------------------*/
+#search {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+#search h2 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#search h3 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+#search .flex {
+	justify-content: center;
+	gap: 2rem;
+}
+
+#search .point {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	width: 20vw;
+	border-top: 4px solid #4072B3;
+	border-right: 1px solid #544446;
+	border-bottom: 1px solid #544446;
+	border-left: 1px solid #544446;
+}
+
+#search .point p:first-child {
+	text-align: center;
+	font-size: 1.25rem;
+	height: 80px;
+	background-color: #AEC4E5;
+
+}
+
+#search .t1 {
+	padding: 25px 0;
+}
+
+#search .t2 {
+	padding: 10px 0;
+}
+
+#search .point p:last-child {
+	font-size: 0.9rem;
+	margin: 0.5rem;
+}
+
+.up{
+  box-sizing: border-box;
+}
+
+.up{
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+   
+.up.show {
+    opacity: 1;
+    transform: none;
+  }
+   
+.op{
+    transform: translate(0, 100px);
+  }
+
+.kari {
+	display: block;
+	width: 15vw;
+	height: 3rem;
+	background-color: #C0C0C0;
+	color: #000;
+	border-radius: 0.5rem;
+	margin: 2rem auto;
+}
+
+.kari:hover {
+	background-color: #AEC4E5;
+}
+
+/*登録から就業までの流れ
+----------------------------------------------------------*/
+#flow {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+#flow h3 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+#flow .flex {
+	justify-content: center;
+	margin: 2rem;
+}
+
+#flow .flow_item {
+	width: 13vw;
+}
+
+#flow .flow_item p {
+	text-align: center;
+	margin: 0.5rem;
+}
+
+#flow .flow_item img {
+	width: 50%;
+	display: block;
+	margin: auto;
+}
+
+/*求人をお考えの企業様
+----------------------------------------------------------*/
+#company {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+
+#company h2 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#company p {
+	width: 70vw;
+	margin: auto;
+	line-height: 1.8rem;
+}
+
+/*NEWS
+----------------------------------------------------------*/
+#news {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:64%;
+    margin:0 auto;
+    height: 65vh;
+}
+
+.slider img {
+    width:30vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
+    height:auto;
+}
+
+.slider .slick-slide {
+  transform: scale(0.8);/*左右の画像のサイズを80%に*/
+  transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+  opacity: 0.5;/*透過50%*/
+}
+
+.slider .slick-slide.slick-center{
+  transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+  opacity: 1;/*透過なし*/
+}
+
+
+/*矢印の設定*/
+
+/*戻る、次へ矢印の位置*/
+.slick-prev, 
+.slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+}
+
+.slick-prev {/*戻る矢印の位置と形状*/
+    left: -1.5%;
+    transform: rotate(-135deg);
+}
+
+.slick-next {/*次へ矢印の位置と形状*/
+    right: -1.5%;
+    transform: rotate(45deg);
+}
+
+/*ドットナビゲーションの設定*/
+
+.slick-dots {
+    text-align:center;
+  margin:20px 0 0 0;
+}
+
+.slick-dots li {
+    display:inline-block;
+  margin:0 5px;
+}
+
+.slick-dots button {
+    color: transparent;
+    outline: none;
+    width:8px;/*ドットボタンのサイズ*/
+    height:8px;/*ドットボタンのサイズ*/
+    display:block;
+    border-radius:50%;
+    background:#ccc;/*ドットボタンの色*/
+}
+
+.slick-dots .slick-active button{
+    background:#333;/*ドットボタンの現在地表示の色*/
+}
+
+#news h2 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#news li {
+	cursor: pointer;
+}
+
+#news li:hover {
+	opacity: 0.8;
+}
+
+#news .title{
+	text-align: center;
+	font-size: 1.2rem;
+}
+
+#news .content {
+	margin: auto;
+	width: 28vw;
+	font-size: 0.9rem;
+}
+/*FOOTER
+----------------------------------------------------------*/
+footer {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	background-color: #6088C6;
+	color: #000;
+}
+
+footer h1 {
+	font-family: 'Zen Antique Soft', serif;
+	font-size: 2.25rem;
+	text-align: center;
+	font-weight: normal;
+	padding: 1.5rem;
+}
+
+footer .flex {
+	justify-content: center;
+}
+
+footer .flex p {
+	font-weight: normal;
+	width: 15vw;
+	text-align: center;
+/*	padding-right:1.5rem;
+	padding-left:1.5rem;*/
+	font-size: 1.2rem;
+	border-right: 1px solid #000;
+}
+
+footer .flex p:first-child {
+	border-left: 1px solid #000;
+}
+
+footer ul {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+footer a {
+	color: #000;
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+}
+
+footer .c{
+	text-align: center;
+	padding-bottom: 1rem;
+}
+
+/*会社概要
+----------------------------------------------------------*/
+
+/*HEADER
+----------------------------------------------------------*/
+#about .big_bg {
+	background-image: url(../img/about_bg.jpg);
+	min-height: 60vh;
+	background-size: cover;
+	background-position: center;
+}
+
+#about a {
+	color: #000;
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+}
+
+#about h2 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	font-size: 3rem;
+	padding-top: 7rem;
+	padding-left: 5rem;
+}
+
+/*ごあいさつ
+----------------------------------------------------------*/
+#ex h3 {
+	font-weight: normal;
+	text-align: center;
+	margin-bottom: 2rem;
+	font-size: 2rem;
+}
+
+/*会社概要
+---------------------------------------------------------*/
+#det {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+#det h3 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#det .flex {
+	border-bottom: 1px dashed #000;
+	width: 50vw;
+	margin: auto;
+	padding: 1rem 10rem;
+}
+
+#det .flex:last-child{
+	border-bottom: none;
+}
+
+#det dt {
+	min-width: 10vw;
+}
+
+#det dl {
+	border: 5px double #000;
+	width: 55vw;
+	margin: auto;
+}
+
+/*会社概要
+---------------------------------------------------------*/
+#history {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+#history h3 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#history .flex {
+	border-bottom: 1px dashed #000;
+	width: 50vw;
+	margin: auto;
+	padding: 1rem 5rem;
+}
+
+#history .flex:last-child{
+	border-bottom: none;
+}
+
+#history .flex p:first-child{
+	min-width: 10vw;
+}
+
+#history .bg {
+	border: 5px double #000;
+	width: 55vw;
+	margin: auto;
+}
+
+/*マージン率
+---------------------------------------------------------*/
+#margin {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;	
+}
+
+#margin h3 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#margin .flex{
+	justify-content: center;
+}
+
+#margin .flex p:first-child {
+	min-width: 10vw;
+}
+
+/*仕事を探す
+---------------------------------------------------------*/
+/*HEADER
+---------------------------------------------------------*/
+#work {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;	
+}
+
+#work a {
+	color: #000;
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+}
+
+#work .big_bg {
+	background-image: url(../img/work_bg.jpg);
+	min-height: 60vh;
+	background-size: cover;
+	background-position: center;
+}
+
+#work h2 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	font-size: 3rem;
+	padding-top: 7rem;
+	padding-left: 5rem;
+}
+
+/*働くまでの流れ
+---------------------------------------------------------*/
+#w_flow {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+#w_flow h3 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#w_flow .flex {
+	width: 80vw;
+	margin: auto;
+	align-items: center;
+	position: relative;
+}
+
+#w_flow .flex:nth-child(2):before,
+#w_flow .flex:nth-child(4):before{
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	border-top-color: #AEC4E5;
+	border-width: 40px;
+	margin-left: -40px;
+}
+
+#w_flow .flex:nth-child(odd):before{
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	border-top-color: #fff;
+	border-width: 40px;
+	margin-left: -40px;
+	z-index: 1;
+}
+
+#w_flow .flex:nth-child(even) {
+	background-color: #AEC4E5;
+}
+
+#w_flow img {
+	width: 40%;
+}
+
+#w_flow .item {
+	width: 60%;
+	padding: 3rem;
+}
+
+#w_flow .item p:first-child {
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+
+/*よくあるご質問
+---------------------------------------------------------*/
+#question {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+#question h3 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#question .items {
+	width: 70vw;
+	margin: auto;
+}
+
+#question .item {
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+}
+
+#question .flex {
+	gap: 1rem;
+}
+
+#question .flex p:last-child {
+	width: 95%;
+}
+
+#question .que {
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+}
+
+#question .que p:first-child {
+	background-color: #6088C6;
+	width: 25px;
+	height: 25px;
+	border-radius: 20%;
+	text-align: center;
+}
+
+#question .ans p:first-child {
+	font-size: 1.1rem;
+	background-color: #EB8686;
+	width: 25px;
+	height: 25px;
+	border-radius: 20%;
+	text-align: center;
+}
+
+#question .ans {
+	font-size: 0.9rem;
+}
+
+
+/*人材を探す
+---------------------------------------------------------*/
+/*HEADER
+---------------------------------------------------------*/
+#human {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;	
+}
+
+#human a {
+	color: #000;
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+}
+
+#human .big_bg {
+	background-image: url(../img/company_bg.jpg);
+	min-height: 60vh;
+	background-size: cover;
+	background-position: center;
+}
+
+#human h2 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	font-size: 3rem;
+	padding-top: 7rem;
+	padding-left: 5rem;
+}
+
+/*派遣を使用するメリット
+---------------------------------------------------------*/
+#service {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+#service h3{
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 3rem;
+}
+
+#service .items {
+	justify-content: center;
+	gap: 5rem;
+}
+
+#service .item{
+	width: 18vw;
+	padding: 0.5rem;
+}
+
+#service .item img{
+	width: 40%;
+	display: block;
+	margin: 2rem auto;
+}
+
+#service .item p:nth-child(2) {
+	border-top: 1px solid #000;
+	padding-top: 0.4rem;
+	font-size: 1.2rem;
+	text-align: center;
+	margin: 0.8rem auto 0.4rem;
+}
+
+/*対応業種
+---------------------------------------------------------*/
+#industry {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+#industry h3{
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#industry .items{
+	width: 50vw;
+	margin: auto;
+}
+
+#industry .flex {
+	margin-bottom: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px dashed #000;
+}
+
+#industry .flex p:first-child{
+	min-width: 10vw;
+	margin-left: 1rem;
+}
+
+/*ご利用までの流れ
+---------------------------------------------------------*/
+#use_flow {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+#use_flow h3 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#use_flow .items {
+	width: 70vw;
+	margin: auto;
+}
+
+#use_flow .flex {
+	margin-bottom: 1rem;
+}
+
+#use_flow .step {
+	min-width: 6vw;
+	padding-top: 1rem;
+	text-align: center;
+	height: 6rem;
+	background-color: #6088C6;
+	position: relative;
+	line-height: 1.5rem;
+}
+
+#use_flow .step span{
+	font-size: 2.5rem;
+}
+
+#use_flow .step:before{
+	position: absolute;
+	top: 0;
+	left: 100%;
+	border: solid transparent;
+	content: "";
+	border-left-color: #6088C6;
+	border-width: 48px;
+}
+
+#use_flow .item {
+	border: 1px solid #000;
+	min-height: 7rem;
+	min-width: 68vw;
+	margin-top: 0.3rem;
+	margin-left: -3rem;
+	padding: 0.5rem 1rem 1rem 7rem;
+}
+
+#use_flow .item:nth-child(2),
+#use_flow .item:nth-child(3){
+	padding-top: 1rem;
+}
+
+
+#use_flow .item p:first-child{
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+/*仕事詳細
+---------------------------------------------------------*/
+/*HEADER
+----------------------------------------------------------*/
+#information .big_bg {
+	background-image: url(../img/info_bg.jpg);
+	min-height: 50vh;
+	background-size: cover;
+	background-position: center;
+}
+
+#information a {
+	color: #000;
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+}
+
+#information h2 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	font-size: 3rem;
+	padding-top: 7rem;
+	padding-left: 5rem;
+}
+
+/*詳細
+----------------------------------------------------------*/
+#info_det {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+}
+
+#info_det h3 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#info_det .es {
+	text-align: center;
+	font-size: 1.5rem;
+	width: 75vw;
+	background-color: #6088C6;
+	padding: 1rem 0;
+	margin: auto;
+}
+
+#info_det .items {
+	width: 75vw;
+	margin: auto;
+	border: 1px solid #544446;
+	border-top: none;
+	padding: 1rem;
+}
+
+#info_det .item {
+	margin-bottom: 1rem;
+	padding-bottom: 1rem;
+	border-bottom: 1px solid #544446;
+	align-items: center;
+}
+
+#info_det .item:first-child {
+	margin-top: 1rem;
+}
+
+#info_det .item:last-child{
+	border-bottom: none;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+#info_det .item dt{
+	min-width: 15vw;
+	padding-left: 2rem;
+}
+
+.button {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+	background-color: #C0C0C0;
+	width: 15vw;
+	height: 3rem;
+	border-radius: 0.5rem;
+	margin: 1rem auto 3rem;
+	padding-top: 0.8rem;
+	text-align: center;
+	color: #000;
+}
+
+.button:hover {
+	background-color: #AEC4E5;
+}
+
+/*登録ページ
+----------------------------------------------------------*/
+#input {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+	width: 60vw;
+	margin: auto;
+}
+
+#input h2 {
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+
+#input .title {
+	border-bottom: 2px solid #6088C6;
+	font-size: 1.3rem;
+	padding-left: 1rem;
+}
+
+#input span {
+	color: red;
+	font-size: 0.6rem;
+}
+
+#input .sub {
+	font-size: 0.8rem;
+	margin-top: 1rem;
+}
+
+#input .flex {
+	align-items: center;
+}
+
+#input dl {
+	border: 2px solid #ddd;
+}
+
+#input .flex dt {
+	min-width: 12vw;
+	min-height: 7vw;
+	padding: 2rem 1rem;
+	background-color: #AEC4E5;
+}
+
+#input .flex dd {
+	padding: 1rem;
+}
+
+#input .flex dd p {
+	font-size: 0.8rem;
+}
+
+#input .flex input {
+	margin: 0 1rem;
+	background-color: #C0C0C0;
+	padding: 0.3rem 1rem 0.3rem 0;
+}
+
+#input .flex select {
+	cursor: pointer;
+	padding-right: 1rem;
+	padding-left: 0.5rem;
+}
+
+#input .flex label {
+	font-size: 0.8rem;
+}
+
+#input .cp {
+	position: relative;
+	margin-left: 1rem;
+	background-color: #C0C0C0;
+}
+
+#input .cp:before{
+	position: absolute;
+	top: 40%;
+	left: 70%;
+	border: solid transparent;
+	content: "";
+	pointer-events: none;
+	border-top-color: #000;
+	border-width: 5px;
+}
+
+#input .mail {
+	margin-left: 1rem;
+}
+
+#input .item {
+	border-bottom: 2px solid #ddd;
+}
+
+#input .item:last-child {
+	border-bottom: none;
+}
+
+
+.thank {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+	background-color: #C0C0C0;
+	width: 15vw;
+	height: 3rem;
+	border-radius: 0.5rem;
+	margin: 1rem auto 3rem;
+	padding-top: 0.8rem;
+	text-align: center;
+	color: #000;
+}
+
+.thank:hover {
+	background-color: #AEC4E5;
+}
+
+/*THANKYOU
+---------------------------------------------------------*/
+#thank a {
+	color: #000;
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+}
+
+#thank .mas{
+	font-family: 'Zen Antique Soft', serif;
+	font-weight: normal;
+	text-align: center;
+	font-size: 2rem;
+}
+
+#thank p:first-child {
+	margin-top: 20vh;
+	padding-bottom: 2rem;
+}
+
+#thank .button {
+	font-family: 'Shippori Antique B1', sans-serif;
+	font-weight: normal;
+	margin-bottom: 30vh;
+}
+

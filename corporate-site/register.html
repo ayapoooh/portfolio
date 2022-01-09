@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>株式会社LINK</title>
+
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/ress/dist/ress.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="js/slick-1.8.1/slick/slick.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="img/logo.png">
+
+
+</head>
+<body>
+	<header id="home" class="space">
+		<div class="flex header">
+			<h1 class="name"><a href="index.html"><img src="img/logo.png" alt="ロゴ">株式会社LINK</a></h1>
+			<nav>
+				<ul class="flex main_nav">
+					<a href="about.html"><li>会社概要</li></a>
+					<a href="work.html"><li>仕事を探す</li></a>
+					<a href="company.html"><li>人材を探す</li></a>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<div id="input">
+		<h2>基本情報の入力</h2>
+		<p class="title">基本情報</p>
+		<p class="sub"><span>※</span>は必須項目です</p>
+		<dl class="space">
+			<div class="flex item">
+				<dt>お名前<span>※</span><br>
+				(全角カタカナ)</dt>
+				<dd>
+					<div class="flex">
+					<label for="l_name">セイ</label>
+					<input type="text" id="l_name" name="l_name" placeholder="ハケン">
+					<label for="l_name">メイ</label>
+					<input type="text" id="l_name" name="l_name" placeholder="タロウ">
+					</div>
+				</dd>
+			</div>
+			<div class="flex item">
+				<dt>性別<span>※</span></dt>
+				<dd>
+					<input type="radio" name="gender" value="男">男性
+					<input type="radio" name="gender" value="女">女性
+				</dd>
+			</div>
+			<div class="flex item">
+				<dt>生年月日<span>※</span></dt>
+				<dd class="flex">
+					<div class="cp">
+						<select name="year" id="year">
+						</select>
+					</div>
+					年
+					<div class="cp">
+						<select name="month" id="month">
+						</select>
+					</div>
+					月
+					
+					<div class="cp">
+						<select name="day" id="day">
+						</select>
+					</div>
+					日
+					
+				</dd>
+			</div>
+			<div class="flex item">
+				<dt>お電話番号<span>※</span></dt>
+				<dd>
+					<input type="radio" name="tel" value="携帯" class="tel">携帯電話
+					<input type="radio" name="tel" value="自宅" class="tel">自宅
+					<div class="flex">
+					<input type="tel" name="tel_number" placeholder="099xxxxxxx">
+					<p>[入力例:0991234567]</p>
+					</div>
+				</dd>
+			</div>
+			<div class="flex item">
+				<dt>メールアドレス<span>※</span></dt>
+				<dd>
+					<input type="email" name="email" placeholder="text@link.co.jp">
+					<p class="mail">半角数字でご入力ください</p>
+				</dd>
+			</div>
+		</dl>
+		</div>
+
+		<a href="thank.html"><p class="thank">送信する</p></a>
+
+	</main>
+
+
+	<footer>
+		<h1>株式会社LINK</h1>
+		<div class="flex">
+			<p>&#9743;099-620-3456</p>
+			<p>&#9993;お問い合わせ</p>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">ホーム</a></li>
+				<li><a href="about.html">会社概要</a></li>
+				<li><a href="work.html">仕事を探す</a></li>
+				<li><a href="company.html">人材を探す</a></li>
+			</ul>
+		</nav>
+		<p class="c"><small>2022&copy;shojo</small></p>
+	</footer>
+	<script type="text/javascript">
+        window.onload = function onLoad() {
+            var year = document.getElementById("year");
+            	for (let y = 1970; y <= 2022; y++) {
+            	let text = '<option value="' + y + '">' + y + '</option>';
+            	year.innerHTML += text;
+            }
+
+            var month = document.getElementById("month");
+            	for (let m = 1; m <= 12; m++) {
+            	let text = '<option value="' + m + '">' + m + '</option>';
+            	month.innerHTML += text;
+            }
+
+            var day = document.getElementById("day");
+            	for (let d = 1; d <= 31; d++) {
+            	let text = '<option value="' + d + '">' + d + '</option>';
+            	day.innerHTML += text;
+            }
+            
+        }
+    </script>
+</body>
+</html>
