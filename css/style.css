@@ -32,20 +32,19 @@ h2 {
 
 /*HEADER
 ---------------------------------------------------*/
-header {
+#home {
     height: 25rem;
     background-image: url(../img/main_bg.jpg);
     background-position: center;
     background-size: cover;
 }
 
-header h1 {
+#home h1 {
     font-family: 'Bangers', cursive;
     font-size: 6rem;
     letter-spacing: 0.3rem;
     text-align: center;
     padding-top: 12rem;
-    
 }
 
 /*ハンバーガーメニュー
@@ -593,6 +592,64 @@ footer p {
     margin-top: 3rem;
 }
 
+/*THANKページ
+---------------------------------------------------*/
+#thank {
+    height: 15rem;
+    background-image: url(../img/main_bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#thank h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 6rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    padding-top: 7rem;
+}
+
+#receive {
+    height: 15rem;
+}
+
+#receive p:first-child {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* エラーがあったとき */
+#receive p:last-child {
+    width: 18%;
+    margin: 3rem auto;
+}
+
+/* エラーがなかったとき */
+#receive dl {
+    width: 30%;
+    margin: 2rem auto 1rem;
+}
+
+#receive .flex dt {
+    width: 40%;
+}
+
+#thank_page .button {
+    text-align: center;
+    width: 8rem;
+    margin: 1rem auto 3rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    background-color: #ff9b09;
+}
+
+#thank_page a {
+    color: #000;
+}
+
+
+
 @media (max-width: 600px) {
     h2 {
         font-size: 1.25rem;
@@ -610,14 +667,13 @@ footer p {
     
     /*HEADER
     ---------------------------------------------------*/
-    header {
+    #home {
         height: 10rem;
     }
     
-    header h1 {
+    #home h1 {
         font-size: 3rem;
         padding-top: 4rem;
-        
     }
     
     /*ハンバーガーメニュー
@@ -973,5 +1029,55 @@ footer p {
     footer p {
         font-size: 0.8rem;
         margin-top: 1rem;
+    }
+
+    /*THANKページ
+    ---------------------------------------------------*/
+    #thank {
+        height: 8rem;
+    }
+
+    #thank h1 {
+        font-size: 2.5rem;
+        padding-top: 3rem;
+    }
+
+    #receive {
+        height: auto;
+    }
+
+    #receive p:first-child {
+        font-size: 1rem;
+        width: 52%;
+        margin: 3rem auto;
+    }
+
+    /* エラーがあったとき */
+    #receive p:last-child {
+        width: 62%;
+        margin: 1rem auto 3rem;
+    }
+
+    /* エラーがなかったとき */
+    #receive .flex {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #receive dl {
+        width: 50%;
+        margin: 1rem auto 3rem;
+    }
+
+    #receive .flex dt {
+        width: 100%;
+    }
+
+    #receive .flex dd {
+        margin-bottom: 1rem;
+    }
+
+    #thank_page a {
+        width: 5rem;
     }
 }
