@@ -1,0 +1,977 @@
+@charset "UTF-8";
+
+/*共通部分
+---------------------------------------------------*/
+html {
+    font-size: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.8rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h2 {
+    font-size: 2.25rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.space {
+    margin-bottom: 4rem;
+}
+
+/*HEADER
+---------------------------------------------------*/
+header {
+    height: 25rem;
+    background-image: url(../img/main_bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+header h1 {
+    font-family: 'Bangers', cursive;
+    font-size: 6rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    padding-top: 12rem;
+    
+}
+
+/*ハンバーガーメニュー
+-----------------------------------------------------*/
+.menu_btn {
+    display : block;
+    position: fixed;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    background-color: #ffd626;
+    cursor: pointer;
+    text-align: center;
+}
+
+.menu_btn span {
+    display : block;
+    position: absolute;
+    width: 60px;
+    height: 4px ;
+    left: 10px;
+    background: #000;
+   -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.menu_btn span:nth-of-type(1) {
+    top: 20px;
+}
+.menu_btn span:nth-of-type(2) {
+    top: 35px;
+}
+.menu_btn span:nth-of-type(3) {
+    top: 50px;
+}
+
+/*メニューボタン展開*/
+.menu_btn.active span:nth-child(1) {
+    top: 34px;
+    left: 10px;
+    background :#000;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.menu_btn.active span:nth-child(2),
+.menu_btn.active span:nth-child(3) {
+    top: 34px;
+    background :#000;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+.main_nav {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    background-color: #ffd626;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 2.5rem;
+    width: 25rem;
+    height: 32rem;
+    transition: opacity .6s ease, visibility .6s ease;
+}
+
+.main_nav p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+.main_nav ul {
+    margin: 2.5rem auto;
+    padding: 0;
+    width: 100%;
+}
+
+.main_nav li {
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1.5rem auto;
+    padding-bottom: 0.2rem;
+    transition: .4s all;
+}
+
+
+.main_nav  li a {
+    display: block;
+    text-decoration: none;
+    position: relative;
+    color: #000;
+}
+
+.main_nav li .s::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 35%;
+    width: 30%;
+    height: 1.5px;
+    background: #000;
+    transition:  all .3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+}
+
+.main_nav li .m::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 25%;
+    width: 50%;
+    height: 1.5px;
+    background: #000;
+    transition:  all .3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+}
+
+.main_nav li .l::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 15%;
+    width: 70%;
+    height: 1.5px;
+    background: #000;
+    transition:  all .3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+}
+
+.main_nav li .ll::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 5%;
+    width: 90%;
+    height: 1.5px;
+    background: #000;
+    transition:  all .3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+}
+
+.main_nav li a:hover::after {
+    transform: scale(1, 1);
+}
+
+.main_nav.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*挨拶
+---------------------------------------------------*/
+#top {
+    height: 25rem;
+}
+
+#top h2 {
+    margin-top: 4rem;
+}
+
+#top p {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/*プロフィール
+---------------------------------------------------*/
+#profile {
+    height: 25rem;
+    background-color: #FBE4D3;
+}
+
+#profile h2 {
+    padding-top: 4rem;
+}
+
+#profile .flex img {
+    width: 15rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+#profile .contents {
+    justify-content: center;
+    width: 50%;
+    gap: 5rem;
+    margin: 0 auto;
+}
+
+#profile .item dt {
+    min-width: 11rem;
+}
+
+/*エンジニアを目指すきっかけ
+---------------------------------------------------*/
+#wake {
+    height: 25rem;
+}
+
+#wake h2{
+    margin-top: 4rem;
+}
+
+#wake p {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/*退職後から現在まで
+---------------------------------------------------*/
+#timeline {
+    background-color: #FBE4D3;
+    padding-top: 4rem;
+}
+
+#timeline .flex{
+    width: 80%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+#timeline .mobile {
+    display: none;
+}
+
+#timeline .items {
+    width: 35%;
+    margin-top: 2rem;
+}
+
+#timeline .items p {
+    max-width: 90%;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #FBF8D3;
+}
+
+/*線の設定*/
+.border_line {
+    margin-top: 1.5rem;
+    width: 2rem;
+    height: 0;
+    background-color: rgb(102, 102, 102);
+}
+
+.border_line.down {
+    position: relative;
+    height: 48rem;
+    transition: all 1s ease;
+}
+
+.border_line.down:before {
+    position: absolute;
+    top: 97%;
+    left: -2rem;
+    border: solid transparent;
+    content: "";
+    border-top-color: rgb(102, 102, 102);
+    border-width: 3rem;
+}
+
+.border_line p {
+    width: 7vw;
+    text-align: center;
+    margin-left: -2.5vw;
+    background-color: #fff;
+    padding: 0.5rem 0;
+}
+
+.border_line p:nth-child(2) {
+    margin-top: 17rem;
+}
+
+.border_line p:last-child {
+    margin-top: 18rem;
+}
+
+/* 左側 */
+
+#timeline .left {
+    opacity: 0;
+}
+
+#timeline .left p{
+    margin-left: auto;
+}
+
+#timeline .left.show {
+    opacity: 1;
+    transition: all 0.8s ease;
+}
+
+#timeline .left p:nth-child(2){
+    margin-top: 0.5rem;
+}
+
+#timeline .left p:nth-child(3){
+    margin-top: 0.5rem;
+}
+
+#timeline .left p:nth-child(4){
+    margin-top: 1rem;
+}
+
+#timeline .left p:nth-child(5){
+    margin-top: 7rem;
+}
+
+#timeline .left p:nth-child(6),
+#timeline .left p:nth-child(7){
+    margin-top: 0.5rem;
+}
+
+/* 右側 */
+
+#timeline .right {
+    opacity: 0;
+    padding-bottom: 8rem;
+}
+
+#timeline .right.show {
+    opacity: 1;
+    transition: all 0.8s ease;
+}
+
+#timeline .right p:nth-child(2){
+    margin-top: 1rem;
+}
+
+#timeline .right p:nth-child(3){
+    margin-top: 0.5rem;
+}
+
+#timeline .right p:nth-child(4){
+    margin-top: 3rem;
+}
+
+#timeline .right p:nth-child(5){
+    margin-top: 2rem;
+}
+
+/*学んだもの
+---------------------------------------------------*/
+#learn h2 {
+    margin-top: 4rem;
+}
+
+#learn .items h3 {
+    text-align: center;
+    font-size: 1.75rem;
+    margin: 2.5rem 0 2rem;
+}
+
+#learn .flex {
+    justify-content: center;
+    align-items: baseline;
+    gap: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#learn .item {
+    max-width: 15%;
+}
+
+#learn .item img{
+    max-width: 30%;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+#learn .item p {
+    text-align: center;
+}
+
+/*作品
+---------------------------------------------------*/
+#work {
+    background-color: #FBE4D3;
+    padding-top: 4rem;
+}
+
+#work.space {
+    padding-bottom: 4rem;
+}
+
+#work .items {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#work .item {
+    width: 90%;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#work .item:hover{
+    opacity: 0.8;
+    padding: 0.5rem;
+    margin-bottom: -0.6rem;
+    font-size: 1rem;
+}
+
+#work .item a {
+    color: #000;
+}
+
+#work .item p {
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+#work .item img {
+    max-width: 70%;
+    display: block;
+    margin: auto;
+}
+
+#work .contents {
+    font-size: 0.9rem;
+    width: 60%;
+    margin: 1rem auto 3rem;
+}
+
+#work .contents p:last-child{
+    text-align: center;
+}
+
+/*お問い合わせ
+---------------------------------------------------*/
+#contact #contact.space {
+    margin-bottom: 4rem;
+}
+
+#contact h2{
+    margin-top: 4rem;
+}
+
+#contact .items {
+    width: 40%;
+    margin: 0 auto;
+}
+
+#contact .item {
+    margin-bottom: 0.8rem;
+}
+
+#contact .item label {
+    display: inline-block;
+    min-width: 18%;
+}
+
+#contact .item input {
+    background-color: #FBF8D3;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.5rem;
+}
+
+#contact .item textarea {
+    background-color: #FBF8D3;
+    border-radius: 0.5rem;
+    min-width: 100%;
+    padding: 0.5rem;
+}
+
+#contact .item input[type="email"] {
+    min-width: 80%;
+}
+
+#contact .item:last-child label{
+    display: block;
+}
+
+#contact .items .button {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.8rem;
+    background-color: #ff9b09;
+    display: block;
+    margin: 1rem auto;
+}
+
+#contact .items .button:hover {
+    background-color: #ff692a;
+}
+
+/*FOOTER
+-----------------------------------------------------*/
+footer {
+    height: 10rem;
+    background-image: url(../img/main_bg.jpg);
+    background-position: bottom;
+    background-size: cover;
+    padding: 3rem;
+}
+
+footer .flex {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer .flex li{
+    list-style: none;
+    padding: 0 2rem;
+    transition: .4s all;
+}
+
+footer .flex a {
+    display: block;
+    color: #000;
+    position: relative;
+}
+
+footer .flex li a::after {
+    content: "";
+    position: absolute;
+    bottom: -0.1rem;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background: #000;
+    transition:  all .3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+}
+
+footer .flex li a:hover::after {
+    transform: scale(1, 1);
+}
+
+footer p {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.25rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .flex {
+        display: flex;
+    }
+    
+    .space {
+        margin-bottom: 4rem;
+    }
+    
+    /*HEADER
+    ---------------------------------------------------*/
+    header {
+        height: 10rem;
+    }
+    
+    header h1 {
+        font-size: 3rem;
+        padding-top: 4rem;
+        
+    }
+    
+    /*ハンバーガーメニュー
+    -----------------------------------------------------*/
+    .menu_btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .menu_btn span {
+        width: 30px;
+        height: 2px ;
+        left: 10px;
+    }
+    .menu_btn span:nth-of-type(1) {
+        top: 13px;
+    }
+    .menu_btn span:nth-of-type(2) {
+        top: 24px;
+    }
+    .menu_btn span:nth-of-type(3) {
+        top: 35px;
+    }
+    
+    /*メニューボタン展開*/
+    .menu_btn.active span:nth-child(1) {
+        top: 24px;
+    }
+    .menu_btn.active span:nth-child(2),
+    .menu_btn.active span:nth-child(3) {
+        top: 24px;
+    }
+    
+    .main_nav {
+        padding-top: 1.5rem;
+        width: 15rem;
+        height: 21rem;
+    }
+
+    .main_nav p {
+        font-size: 0.8rem;
+    }
+    
+    .main_nav ul {
+        margin: 0.5rem auto;
+    }
+    
+    .main_nav li {
+        font-size: 1rem;
+        margin: 0.5rem auto;
+        width: 90%;
+        padding-bottom: 0.1rem;
+        border-bottom: 1px solid #000;
+    }
+
+    .main_nav li:last-child {
+        border-bottom: none;
+    }
+    
+    
+    .main_nav  li a {
+        display: block;
+        text-decoration: none;
+        position: relative;
+        color: #000;
+    }
+    
+    .main_nav li .s::after {
+        content: "";
+        position: absolute;
+        bottom: -0.5rem;
+        left: 35%;
+        width: 30%;
+        height: 1.5px;
+        background: #000;
+        transition:  all .3s;
+        transform: scale(0, 1);
+        transform-origin: center top;
+    }
+    
+    .main_nav li .m::after {
+        content: "";
+        position: absolute;
+        bottom: -0.5rem;
+        left: 25%;
+        width: 50%;
+        height: 1.5px;
+        background: #000;
+        transition:  all .3s;
+        transform: scale(0, 1);
+        transform-origin: center top;
+    }
+    
+    .main_nav li .l::after {
+        content: "";
+        position: absolute;
+        bottom: -0.5rem;
+        left: 15%;
+        width: 70%;
+        height: 1.5px;
+        background: #000;
+        transition:  all .3s;
+        transform: scale(0, 1);
+        transform-origin: center top;
+    }
+    
+    .main_nav li .ll::after {
+        content: "";
+        position: absolute;
+        bottom: -0.5rem;
+        left: 5%;
+        width: 90%;
+        height: 1.5px;
+        background: #000;
+        transition:  all .3s;
+        transform: scale(0, 1);
+        transform-origin: center top;
+    }
+    
+    .main_nav li a:hover::after {
+        transform: scale(1, 1);
+    }
+    
+    .main_nav.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /*挨拶
+    ---------------------------------------------------*/
+    #top {
+        height: auto;
+    }
+    
+    #top h2 {
+        margin-top: 2rem;
+    }
+    
+    #top p {
+        width: 80%;
+        margin: 0 auto 1rem;
+    }
+    
+    /*プロフィール
+    ---------------------------------------------------*/
+    #profile {
+        height: auto;
+        padding-bottom: 1rem;
+    }
+    
+    #profile h2 {
+        padding-top: 2rem;
+    }
+    
+    #profile .flex img {
+        width: 8rem;
+        margin-top: 1rem;
+    }
+    
+    #profile .contents {
+        gap: 1rem;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    #profile .item {
+        font-size: 0.9rem;
+    }
+
+    #profile .item dt {
+        min-width: 9rem;
+    }
+
+    
+    /*エンジニアを目指すきっかけ
+    ---------------------------------------------------*/
+    #wake {
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    
+    #wake h2{
+        margin-top: 2rem;
+    }
+    
+    #wake p {
+        width: 85%;
+        font-size: 0.9rem;
+    }
+    
+    /*退職後から現在まで
+    ---------------------------------------------------*/
+    #timeline {
+        background-color: #FBE4D3;
+        padding-top: 2rem;
+    }
+    
+    #timeline .PC {
+        display: none;
+    }
+
+    #timeline .mobile {
+        display: flex;
+    }
+    
+    #timeline .items {
+        width: 80%;
+        margin-top: 1rem;
+    }
+    
+    #timeline .mobile .items p {
+        max-width: 100%;
+        font-size: 0.8rem;
+        padding: 0.25rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.2rem;
+        border-radius: 0.5rem;
+        background-color: #FBF8D3;
+    }
+
+    #timeline .mobile .items p:last-child {
+        margin-bottom: 4rem;
+    }
+    
+    /*線の設定*/
+    .border_line {
+        margin-top: 1rem;
+        width: 1rem;
+    }
+    
+    .border_line.down {
+        height: 60rem;
+    }
+    
+    .border_line.down:before {
+        top: 99%;
+        left: -1rem;
+        border-width: 1.5rem;
+    }
+    
+    .border_line p {
+        width: 3.5rem;
+        margin-left: -1.25rem;
+    }
+    
+    .border_line p:nth-child(2) {
+        margin-top: 30rem;
+    }
+    
+    .border_line p:last-child {
+        margin-top: 12rem;
+    }
+    
+    /*学んだもの
+    ---------------------------------------------------*/
+    #learn h2 {
+        margin-top: 2rem;
+    }
+    
+    #learn .items h3 {
+        text-align: center;
+        font-size: 1.1rem;
+        margin: 1rem 0 0.5rem;
+    }
+    
+    #learn .flex {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 1rem;
+    }
+    
+    #learn .item {
+        max-width: 50%;
+        margin: 0 auto 1rem;
+    }
+    
+    #learn .item img{
+        margin: 0 auto 0.25rem;
+    }
+    
+    /*作品
+    ---------------------------------------------------*/
+    #work {
+        padding-top: 2rem;
+    }
+    
+    #work.space {
+        padding-bottom: 2rem;
+    }
+    
+    #work .items {
+        width: 90%;
+    }
+    
+    #work .item {
+        width: 100%;
+        font-size: 1rem;
+    }
+    
+    #work .item p {
+        margin-bottom: 0.1rem;
+        text-align: center;
+    }
+    
+    #work .contents {
+        font-size: 0.8rem;
+        width: 65%;
+        margin: 0.5rem auto 2rem;
+        line-height: 1.3rem;
+    }
+    
+    #work .contents p:last-child{
+        margin-top: 0.5rem;
+    }
+    
+    /*お問い合わせ
+    ---------------------------------------------------*/
+    #contact.space {
+        margin-bottom: 2rem;
+    }
+    
+    #contact h2{
+        margin-top: 2rem;
+    }
+
+    #contact .items {
+        width: 80%;
+    }
+    
+    #contact .item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.4rem;
+    }
+    
+    /*FOOTER
+    -----------------------------------------------------*/
+    footer {
+        height: 6rem;
+        padding: 1rem;
+    }
+    
+    footer .flex {
+        width: 80%;
+        text-align: center;
+    }
+    
+    footer .flex li{
+        display: none;
+    }
+    
+    footer p {
+        font-size: 0.8rem;
+        margin-top: 1rem;
+    }
+}
