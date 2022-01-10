@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>株式会社LINK</title>
+
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/ress/dist/ress.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="js/slick-1.8.1/slick/slick.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="img/logo.png">
+
+
+</head>
+<body>
+	<header id="home" class="space">
+		<div class="flex header">
+			<a href="index.html">
+				<div class="flex title">
+					<div class="img_box">
+						<img src="img/logo.png" alt="ロゴ">
+						<img src="img/logo2.png" alt="ロゴ" class="active">
+					</div>				
+					<h1 class="name">株式会社LINK</h1>
+				</div>
+			</a>
+			<nav>
+				<ul class="flex main_nav">
+					<a href="about.html"><li>会社概要</li></a>
+					<a href="work.html"><li>仕事を探す</li></a>
+					<a href="company.html"><li>人材を探す</li></a>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<div id="input">
+            <h2>基本情報の入力</h2>
+            <p class="title">基本情報</p>
+            <p class="sub"><span>※</span>は必須項目です</p>
+            <dl class="space">
+            <form method="POST" action="receive.php">
+                <div class="flex item">
+                    <dt>会社名<span>※</span></dt>
+                    <dd>
+                        <input type="text" name="company_name" placeholder="株式会社○○">
+                    </dd>
+                </div>
+                <div class="flex item">
+                    <dt>ご担当者様の名前<span>※</span></dt>
+                    <dd>
+                        <input type="text" name="name" placeholder="ハケン">
+                    </dd>
+                </div>
+                <div class="flex item">
+                    <dt>お電話番号<span>※</span></dt>
+                    <dd>
+                        <input type="radio" name="tel" value="携帯" class="tel">携帯電話
+                        <input type="radio" name="tel" value="固定電話" class="tel">固定電話
+                        <div class="flex">
+                        <input type="tel" name="tel_number" placeholder="099xxxxxxx">
+                        <p>[入力例:0991234567]</p>
+                        </div>
+                    </dd>
+                </div>
+                <div class="flex item">
+                    <dt>メールアドレス<span>※</span></dt>
+                    <dd>
+                        <input type="email" name="email" placeholder="text@link.co.jp">
+                    </dd>
+                </div>
+                <div class="flex item">
+                    <dt>お問い合わせ内容<span>※</span></dt>
+                    <dd>
+                        <textarea name="message" cols="80" rows="1"></textarea>
+                    </dd>
+                </div>
+            </dl>
+            <div class="submit">
+            <input type="submit" value="送信する" class="button">
+            </div>
+            </form>
+	    </div>
+
+	</main>
+
+
+	<footer>
+		<h1>株式会社LINK</h1>
+		<div class="flex">
+			<p>&#9743;099-620-3456</p>
+			<p>&#9993;お問い合わせ</p>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="index.html">ホーム</a></li>
+				<li><a href="about.html">会社概要</a></li>
+				<li><a href="work.html">仕事を探す</a></li>
+				<li><a href="company.html">人材を探す</a></li>
+			</ul>
+		</nav>
+		<p class="c"><small>2022&copy;shojo</small></p>
+	</footer>
+</body>
+</html>
