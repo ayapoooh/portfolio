@@ -1,5 +1,7 @@
 <?php
-require_once("../util.php");
+require_once("util.php");
+
+
 //文字コードの検証
 if (!cken($_POST)){
     $encoding = mb_internal_encoding();
@@ -49,8 +51,15 @@ if (empty($email)) {
 if (empty($message)) {
     $errors[] = "問い合わせ内容を入力してください";
 }
+?>
+<?php
+mb_language("Japanese");
+mb_internal_encoding("UTF-8");
 
-
+$to = "ayapoooh917@gmail.com";
+$title = "【お問い合わせ】" . $name;
+$message = $message;
+$headers = "From:". $email;
 ?>
 
 <!DOCTYPE html>
@@ -87,8 +96,9 @@ if (count($errors) > 0){ ?>
 <div id="receive">
     <p>入力内容をご確認いただき、再度送信をお願いいたします</p>
     <p class="error"><?php echo implode('<br>', $errors); ?></p>
+    <a href="index.html#contact"><p class="button">戻る</p></a>
 </div>
-<?php } else { ?>
+<?php } else if (mb_send_mail($to, $title, $message, $headers)){ ?>
 <!-------エラーがなかったとき------->
 <div id="receive">
 <p>
@@ -108,9 +118,12 @@ if (count($errors) > 0){ ?>
         <dd><?php echo $message;?></dd>
     </div>
 </dl>
-</div>
-<?php } ?>
 <a href="index.html"><p class="button">戻る</p></a>
+</div>
+<?php }?>
+
+
+
 
 <footer>
 
