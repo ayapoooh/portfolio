@@ -13,53 +13,23 @@ $_POST = es($_POST);
 ?>
 
 <?php
-//苗字
-if (isset($_POST['l_name'])){
-    $l_name = $_POST['l_name'];
+//会社名
+if (isset($_POST['company_name'])){
+    $company_name = $_POST['company_name'];
 } else {
     //未設定エラー
-    $l_name = "";
+    $company_name = "";
 }
-//名前
+//担当者名
 if (isset($_POST['name'])){
     $name = $_POST['name'];
 } else {
     //未設定エラー
     $name = "";
 }
-//性別
-if (isset($_POST["gender"])){
-    $genderValues = ["男", "女"];
-    //正しい値か確認
-    $isGender = in_array($_POST["gender"], $genderValues);
-    if ($isGender) {
-        $gender = $_POST["gender"];
-    } else {
-        $gender = "";
-    }
-}
-//生年月日
-if (isset($_POST['year'])){
-    $year = $_POST['year'];
-} else {
-    //未設定エラー
-    $year = "";
-}
-if (isset($_POST['month'])){
-    $month = $_POST['month'];
-} else {
-    //未設定エラー
-    $month = "";
-}
-if (isset($_POST['day'])){
-    $day = $_POST['day'];
-} else {
-    //未設定エラー
-    $day = "";
-}
 //電話の種類
 if (isset($_POST["tel"])){
-    $telValues = ["携帯", "自宅"];
+    $telValues = ["携帯", "固定電話"];
     //正しい値か確認
     $isTel = in_array($_POST["tel"], $telValues);
     if ($isTel) {
@@ -82,29 +52,25 @@ if (isset($_POST['email'])){
     //未設定エラー
     $email = "";
 }
+//問い合わせ内容
+if (isset($_POST['message'])){
+    $message = $_POST['message'];
+} else {
+    //未設定エラー
+    $message = "";
+}
 
 //エラーメッセージを入れる配列
 $errors = array();
 $errors = [];
 
-//苗字
-if (empty($l_name)) {
-    $errors[] = "苗字を入力してください";
+//会社名
+if (empty($company_name)) {
+    $errors[] = "会社名を入力してください";
 }
 //名前
 if (empty($name)) {
     $errors[] = "名前を入力してください";
-}
-//性別
-if (empty($gender)) {
-    $errors[] = "性別を選択してください";
-}
-//日付の妥当性チェック
-$isDate = checkdate($month, $day, $year);
-if ($isDate) {
-    $date = $year . "年" . $month . "月" . $day . "日";
-} else {
-    $errors[] = "生年月日を選択してください";
 }
 //電話の種類
 if (empty($tel)) {
@@ -113,7 +79,7 @@ if (empty($tel)) {
 //電話番号
 $pattern_h = "/[0-9]{10}/u";
 $pattern_m = "/[0-9]{11}/u";
-if (!empty($tel_number) && $tel == "自宅") {
+if (!empty($tel_number) && $tel == "固定電話") {
     if (1 != preg_match($pattern_h, $tel_number)) {
         $errors[] = "電話番号を入力してください";
     }
@@ -126,6 +92,10 @@ if (!empty($tel_number) && $tel == "携帯") {
 //メールアドレス
 if (empty($email)) {
     $errors[] = "メールアドレスを入力してください";
+}
+//問い合わせ内容
+if (empty($message)) {
+    $errors[] = "問い合わせ内容を入力してください";
 }
 ?>
 
@@ -178,30 +148,26 @@ if (count($errors) > 0){ ?>
     <p class="mas">入力内容をご確認いただき、再度送信をお願いいたします</p>
     <div class="items">
         <p class="error"><?php echo implode('<br>', $errors); ?></p>
-        <a href="register.html"><p class="button">登録画面に戻る</p></a>
+        <a href="consult.html"><p class="button">登録画面に戻る</p></a>
     </div>
     </div>
 <?php } else { ?>
 <!-------エラーがなかったとき------->
-<div id="thank">
+<div id="receive">
 	<div class="mas">
 		<p>送信ありがとうございます</p>
-		<p>登録内容確認後、ご連絡させていただきます</p>
+		<p>内容確認後、担当よりご連絡させていただきます</p>
 	</div>
     <div class="items">
-        <p class="sub">登録内容</p>
+        <p class="sub">お問い合わせ内容</p>
         <dl>
         <div class="flex">
-            <dt>名前</dt>
-            <dd><?php echo $l_name . $name;?></dd>
+            <dt>会社名</dt>
+            <dd><?php echo $company_name;?></dd>
         </div>
         <div class="flex">
-            <dt>性別</dt>
-            <dd><?php echo $gender;?></dd>
-        </div>
-        <div class="flex">
-            <dt>生年月日</dt>
-            <dd><?php echo $date;?></dd>
+            <dt>ご担当者様の名前</dt>
+            <dd><?php echo $name;?></dd>
         </div>
         <div class="flex">
             <dt>お電話番号</dt>
@@ -210,6 +176,10 @@ if (count($errors) > 0){ ?>
         <div class="flex">
             <dt>メールアドレス</dt>
             <dd><?php echo $email;?></dd>
+        </div>
+        <div class="flex">
+            <dt>お問い合わせ内容</dt>
+            <dd><?php echo $message;?></dd>
         </div>
         </dl>
     </div>

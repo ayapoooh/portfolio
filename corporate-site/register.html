@@ -22,7 +22,15 @@
 <body>
 	<header id="home" class="space">
 		<div class="flex header">
-			<h1 class="name"><a href="index.html"><img src="img/logo.png" alt="ロゴ">株式会社LINK</a></h1>
+			<a href="index.html">
+				<div class="flex title">
+					<div class="img_box">
+						<img src="img/logo.png" alt="ロゴ">
+						<img src="img/logo2.png" alt="ロゴ" class="active">
+					</div>				
+					<h1 class="name">株式会社LINK</h1>
+				</div>
+			</a>
 			<nav>
 				<ul class="flex main_nav">
 					<a href="about.html"><li>会社概要</li></a>
@@ -38,6 +46,7 @@
 		<p class="title">基本情報</p>
 		<p class="sub"><span>※</span>は必須項目です</p>
 		<dl class="space">
+		<form method="POST" action="thank.php">
 			<div class="flex item">
 				<dt>お名前<span>※</span><br>
 				(全角カタカナ)</dt>
@@ -45,8 +54,8 @@
 					<div class="flex">
 					<label for="l_name">セイ</label>
 					<input type="text" id="l_name" name="l_name" placeholder="ハケン">
-					<label for="l_name">メイ</label>
-					<input type="text" id="l_name" name="l_name" placeholder="タロウ">
+					<label for="name">メイ</label>
+					<input type="text" id="name" name="name" placeholder="タロウ">
 					</div>
 				</dd>
 			</div>
@@ -98,9 +107,12 @@
 				</dd>
 			</div>
 		</dl>
+		
+		<div class="submit">
+		<input type="submit" value="送信する" class="button">
 		</div>
-
-		<a href="thank.html"><p class="thank">送信する</p></a>
+		</form>
+	</div>
 
 	</main>
 
