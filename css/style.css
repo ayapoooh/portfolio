@@ -33,18 +33,16 @@ h2 {
 /*HEADER
 ---------------------------------------------------*/
 #home {
-    height: 25rem;
     background-image: url(../img/main_bg.jpg);
     background-position: center;
     background-size: cover;
 }
 
 #home h1 {
-    font-family: 'Bangers', cursive;
-    font-size: 6rem;
-    letter-spacing: 0.3rem;
+    font-family: 'Secular One', sans-serif;
+    font-size: 7.5rem;
     text-align: center;
-    padding-top: 12rem;
+    padding: 24vh;
 }
 
 /*ハンバーガーメニュー
@@ -59,7 +57,6 @@ h2 {
     height: 80px;
     background-color: #ffd626;
     cursor: pointer;
-    text-align: center;
 }
 
 .menu_btn span {
@@ -129,7 +126,7 @@ h2 {
 .main_nav li {
     list-style-type: none;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin: 1.5rem auto;
     padding-bottom: 0.2rem;
     transition: .4s all;
@@ -207,32 +204,24 @@ h2 {
 /*挨拶
 ---------------------------------------------------*/
 #top {
-    height: 25rem;
-}
-
-#top h2 {
-    margin-top: 4rem;
+    padding: 10vh 0;
 }
 
 #top p {
-    width: 50%;
+    width: 45%;
     margin: 0 auto;
 }
 
 /*プロフィール
 ---------------------------------------------------*/
 #profile {
-    height: 25rem;
-    background-color: #FBE4D3;
-}
-
-#profile h2 {
-    padding-top: 4rem;
+    padding: 8vh 0;
+    background-color: rgb(251, 228, 211);
 }
 
 #profile .flex img {
-    width: 15rem;
-    height: auto;
+    width: 30%;
+    height: 15%;
     border-radius: 50%;
 }
 
@@ -244,13 +233,13 @@ h2 {
 }
 
 #profile .item dt {
-    min-width: 11rem;
+    min-width: 11vw;
 }
 
 /*私の強み
 ---------------------------------------------------*/
-#strong h2{
-    margin-top: 4rem;
+#strong{
+    margin: 8vh 0;
 }
 
 #strong .title {
@@ -265,8 +254,8 @@ h2 {
 /*エンジニアを目指すきっかけ
 ---------------------------------------------------*/
 #wake {
-    padding: 4rem 0;
-    background-color: #FBE4D3;
+    padding: 8vh 0;
+    background-color: rgb(251, 228, 211);
 }
 
 #wake p {
@@ -278,7 +267,7 @@ h2 {
 /*退職後から現在まで
 ---------------------------------------------------*/
 #timeline {
-    padding-top: 4rem;
+    padding: 8vh;
 }
 
 #timeline .flex{
@@ -307,7 +296,7 @@ h2 {
 /*線の設定*/
 .border_line {
     margin-top: 1.5rem;
-    width: 2rem;
+    width: 3%;
     height: 0;
     background-color: rgb(102, 102, 102);
 }
@@ -385,7 +374,6 @@ h2 {
 
 #timeline .right {
     opacity: 0;
-    padding-bottom: 8rem;
 }
 
 #timeline .right.show {
@@ -413,8 +401,8 @@ h2 {
 /*目指す将来像
 ---------------------------------------------------*/
 #future {
-    padding: 4rem 0;
-    background-color: #FBE4D3;
+    padding: 8vh 0;
+    background-color: rgb(251, 228, 211);
 }
 
 #future p {
@@ -424,8 +412,8 @@ h2 {
 
 /*学んだもの
 ---------------------------------------------------*/
-#learn h2 {
-    margin-top: 4rem;
+#learn {
+    padding: 8vh;
 }
 
 #learn .items h3 {
@@ -446,7 +434,7 @@ h2 {
 }
 
 #learn .item img{
-    max-width: 30%;
+    max-width: 40%;
     display: block;
     margin: 0 auto 1rem;
 }
@@ -458,8 +446,8 @@ h2 {
 /*作品
 ---------------------------------------------------*/
 #work {
-    background-color: #FBE4D3;
-    padding-top: 4rem;
+    background-color: rgb(251, 228, 211);
+    padding: 8vh;
 }
 
 #work.space {
@@ -507,15 +495,23 @@ h2 {
     margin: 1rem auto 3rem;
 }
 
+#work .contents a {
+    color: 	rgb(251, 134, 48);
+}
+
+#work .contents a:hover {
+    border-bottom: 1px solid rgb(251, 134, 48);
+}
+
 
 /*お問い合わせ
 ---------------------------------------------------*/
-#contact #contact.space {
-    margin-bottom: 4rem;
+#contact{
+    padding: 8vh;
 }
 
-#contact h2{
-    margin-top: 4rem;
+#contact #contact.space {
+    margin-bottom: 4rem;
 }
 
 #contact .items {
@@ -619,22 +615,21 @@ footer p {
 /*THANKページ
 ---------------------------------------------------*/
 #thank {
-    height: 15rem;
     background-image: url(../img/main_bg.jpg);
     background-position: center;
     background-size: cover;
 }
 
 #thank h1 {
-    font-family: 'Bangers', cursive;
+    font-family: 'Secular One', sans-serif;
     font-size: 6rem;
     letter-spacing: 0.3rem;
     text-align: center;
-    padding-top: 7rem;
+    padding: 24vh;
 }
 
 #receive {
-    height: 23rem;
+    height: 50vh;
 }
 
 #receive p:first-child {
@@ -892,7 +887,7 @@ footer p {
     /*退職後から現在まで
     ---------------------------------------------------*/
     #timeline {
-        background-color: #FBE4D3;
+        background-color: rgb(251, 228, 211);
         padding-top: 2rem;
     }
     
