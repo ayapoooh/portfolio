@@ -286,11 +286,13 @@ h2 {
 }
 
 #timeline .items p {
-    max-width: 90%;
-    font-size: 0.9rem;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    background-color: #FBF8D3;
+    font-size: 1.05rem;
+    padding:0;
+}
+
+#timeline .items .item p {
+    font-size: 0.85rem;
+    padding-left: 1rem;
 }
 
 /*線の設定*/
@@ -349,25 +351,59 @@ h2 {
     transition: all 0.8s ease;
 }
 
-#timeline .left p:nth-child(2){
-    margin-top: 0.5rem;
+#timeline .bg_1 {
+    background-color: #FBFAEC;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 0.5rem;
 }
 
-#timeline .left p:nth-child(3){
+#timeline .bg_3{
     margin-top: 0.5rem;
+    background-color: #FBF8D3;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 0.5rem;
 }
 
-#timeline .left p:nth-child(4){
+#timeline .bg_6{
+    margin-top: 0.5rem;
+    background-color: #FBF5AD;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 0.5rem;
+}
+
+#timeline .left .bg_7 {
     margin-top: 1rem;
+    background-color: #FBF4A1;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 0.5rem;
 }
 
-#timeline .left p:nth-child(5){
+#timeline .bg_9 {
     margin-top: 7rem;
+    background-color: #FBF288;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 0.5rem;
 }
 
-#timeline .left p:nth-child(6),
-#timeline .left p:nth-child(7){
+
+#timeline .bg_11 {
     margin-top: 0.5rem;
+    background-color: #FBF06F;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 0.5rem;
+}
+#timeline .bg_12 {
+    margin-top: 0.5rem;
+    background-color: #FBF062;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 0.5rem;
 }
 
 /* 右側 */
@@ -381,20 +417,43 @@ h2 {
     transition: all 0.8s ease;
 }
 
-#timeline .right p:nth-child(2){
+#timeline .bg_2 {
+    background-color: #FBF9E0;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 0.5rem;
+}
+
+#timeline .bg_4 {
     margin-top: 1rem;
+    background-color: #FBF7C6;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 0.5rem;
 }
 
-#timeline .right p:nth-child(3){
+#timeline .bg_5 {
     margin-top: 0.5rem;
+    background-color: #FBF6BA;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 0.5rem;
 }
 
-#timeline .right p:nth-child(4){
-    margin-top: 3rem;
+#timeline .bg_8 {
+    margin-top: 5rem;
+    background-color: #FBF394;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 0.5rem;
 }
 
-#timeline .right p:nth-child(5){
+#timeline .bg_10 {
     margin-top: 2rem;
+    background-color: #FBF17B;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 0.5rem;
 }
 
 
@@ -489,18 +548,24 @@ h2 {
 }
 
 #work .contents {
-    font-size: 0.9rem;
-    text-align: center;
-    width: 60%;
+    font-size: 1rem;
+    width: 65%;
     margin: 1rem auto 3rem;
 }
 
+#work .contents .center {
+    text-align: center;
+}
+
 #work .contents a {
+    font-size: 1.1rem;
     color: 	rgb(251, 134, 48);
+    border-bottom: 2px solid rgb(251, 134, 48);
 }
 
 #work .contents a:hover {
-    border-bottom: 1px solid rgb(251, 134, 48);
+    color: rgb(251, 177, 123);
+    border-bottom: 2px solid rgb(251, 177, 123);
 }
 
 
@@ -685,14 +750,10 @@ footer p {
     }
     
     /*HEADER
-    ---------------------------------------------------*/
-    #home {
-        height: 10rem;
-    }
-    
+    ---------------------------------------------------*/    
     #home h1 {
         font-size: 3rem;
-        padding-top: 4rem;
+        padding: 4rem 0;
     }
     
     /*ハンバーガーメニュー
@@ -728,7 +789,7 @@ footer p {
     
     .main_nav {
         padding-top: 1.5rem;
-        width: 15rem;
+        width: 45%;
         height: 21rem;
     }
 
@@ -824,11 +885,7 @@ footer p {
     /*挨拶
     ---------------------------------------------------*/
     #top {
-        height: auto;
-    }
-    
-    #top h2 {
-        margin-top: 2rem;
+        padding: 2rem auto;
     }
     
     #top p {
@@ -840,11 +897,7 @@ footer p {
     ---------------------------------------------------*/
     #profile {
         height: auto;
-        padding-bottom: 1rem;
-    }
-    
-    #profile h2 {
-        padding-top: 2rem;
+        padding: 2rem 0;
     }
     
     #profile .flex img {
@@ -867,16 +920,26 @@ footer p {
         min-width: 9rem;
     }
 
+    /*私の強み
+    ---------------------------------------------------*/
+    #strong{
+        padding: 2rem 0;
+    }
+
+    #strong .title {
+        font-size: 1.1rem;
+    }
+
+    #strong p {
+        width: 85%;
+        margin: 0 auto 0.5rem;
+    }
     
     /*エンジニアを目指すきっかけ
     ---------------------------------------------------*/
     #wake {
         height: auto;
-        margin-bottom: 1rem;
-    }
-    
-    #wake h2{
-        margin-top: 2rem;
+        padding: 2rem 0;
     }
     
     #wake p {
@@ -887,8 +950,7 @@ footer p {
     /*退職後から現在まで
     ---------------------------------------------------*/
     #timeline {
-        background-color: rgb(251, 228, 211);
-        padding-top: 2rem;
+        padding: 2rem;
     }
     
     #timeline .PC {
@@ -911,7 +973,7 @@ footer p {
         margin-bottom: 0.5rem;
         line-height: 1.2rem;
         border-radius: 0.5rem;
-        background-color: #FBF8D3;
+        background-color: #FBF5AE;
     }
 
     #timeline .mobile .items p:last-child {
@@ -945,6 +1007,17 @@ footer p {
     
     .border_line p:last-child {
         margin-top: 12rem;
+    }
+
+    /*目指す将来像
+    ---------------------------------------------------*/
+    #future {
+        padding: 2rem 0;
+    }
+
+    #future p {
+        width: 85%;
+        margin: 0 auto;
     }
     
     /*学んだもの
